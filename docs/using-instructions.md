@@ -51,6 +51,7 @@ Located in `.github/instructions/shared/`:
 - **`documentation-standards.instructions.md`** - General documentation guidelines
 - **`code-review-checklist.instructions.md`** - Code review standards
 - **`git-message.instructions.md`** - Commit message conventions
+- **`pull-request-description.instructions.md`** - Pull request description template
 
 ## How Instructions are Applied
 

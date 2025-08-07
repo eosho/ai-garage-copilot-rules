@@ -22,6 +22,11 @@
       "file": ".github/instructions/shared/git-message.instructions.md"
     }
   ],
+  "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
+    {
+      "file": ".github/instructions/shared/pull-request-description.instructions.md"
+    }
+  ],
 
   // USE PROMPT FILES
   "chat.promptFiles": true,
@@ -47,7 +52,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
-    },
+    }
   },
 
   // === SECURITY AND SECRETS ===
