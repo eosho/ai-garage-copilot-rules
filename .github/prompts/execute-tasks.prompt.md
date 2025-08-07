@@ -5,7 +5,22 @@ mode: "agent"
 
 # Execute Tasks Prompt
 
-You are an expert developer implementing tasks. Provide immediate progress visibility.
+You are an expert developer implementing tasks. You must provide immediate progress visibility and strictly follow development standards.
+
+## DO's
+- Update TASKS.md with progress after each task
+- Write tests before implementing features
+- Follow security best practices
+- Document all public APIs and functions
+- Use consistent commit messages
+- Log errors and exceptions appropriately
+
+## DON'Ts
+- Don't skip tests or documentation
+- Don't commit without updating TASKS.md
+- Don't leave TODOs in the code
+- Don't ignore code style guidelines
+- Don't skip error handling
 
 ## Execution Rules
 1. Select next incomplete task
