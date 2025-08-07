@@ -16,13 +16,13 @@ Prompt files (`.prompt.md`) are specialized instructions that guide GitHub Copil
 ### Workflow Prompts
 Located in `.github/prompts/`:
 
-- **`prd-creation.prompt.md`** - Transform ideas into Product Requirements Documents
-- **`task-generation.prompt.md`** - Create detailed project plans with features and tasks
-- **`solution-architecture.prompt.md`** - Design technical architecture and system design
-- **`task-execution.prompt.md`** - Guide prototype development approach
+- **`create-prd.prompt.md`** - Transform ideas into Product Requirements Documents
+- **`generate-tasks.prompt.md`** - Create detailed project plans with features and tasks
+- **`design-architecture.prompt.md`** - Design technical architecture and system design
+- **`execute-tasks.prompt.md`** - Guide prototype development approach
 
 ### Utility Prompts
-- **`task-review.prompt.md`** - Comprehensive code review following project standards
+- **`review-tasks.prompt.md`** - Comprehensive code review following project standards
 
 ## How to Run Prompts
 
@@ -37,65 +37,65 @@ Located in `.github/prompts/`:
 
 1. **Open Copilot Chat**: Click the chat icon in VS Code sidebar
 2. **Reference prompt**: Type `@workspace` followed by prompt reference
-3. **Example**: `@workspace Follow the prd-creation.prompt.md process for my mobile app idea`
+3. **Example**: `@workspace Follow the create-prd.prompt.md process for my mobile app idea`
 
 ### Method 3: Inline Chat
 
 1. **Open inline chat**: `Ctrl+I` (Windows) or `Cmd+I` (Mac)
 2. **Reference prompt**: Type `@workspace` and reference the prompt file
-3. **Example**: `@workspace Use task-execution.prompt.md to create user management API`
+3. **Example**: `@workspace Use execute-tasks.prompt.md to create user management API`
 
 ## Workflow Execution
 
 ### Complete Development Workflow
 
 #### 1. New Idea → PRD
-**Prompt**: `prd-creation.prompt.md`
+**Prompt**: `create-prd.prompt.md`
 **Purpose**: Transform raw ideas into structured Product Requirements Documents
 **Output**: `PRD.md` file with comprehensive requirements
 
 **Example Usage**:
 ```
-Run Command: Chat: Run Prompt → prd-creation.prompt.md
+Run Command: Chat: Run Prompt → create-prd.prompt.md
 Input: "I want to build a task management app for remote teams"
 Process: Answer discovery questions about users, features, constraints
 Output: Detailed PRD.md with specifications
 ```
 
 #### 2. PRD → Development Plan
-**Prompt**: `task-generation.prompt.md`
+**Prompt**: `generate-tasks.prompt.md`
 **Purpose**: Break down requirements into actionable development tasks
 **Output**: `Development-Plan.md` with features, tasks, and timelines
 
 **Example Usage**:
 ```
-Run Command: Chat: Run Prompt → task-generation.prompt.md
+Run Command: Chat: Run Prompt → generate-tasks.prompt.md
 Input: Reference the generated PRD.md
 Process: Answer questions about team, timeline, technical preferences
 Output: Structured plan with sprints and task breakdown
 ```
 
 #### 3. Plan → Architecture
-**Prompt**: `solution-architecture.prompt.md`
+**Prompt**: `design-architecture.prompt.md`
 **Purpose**: Design technical architecture and system components
 **Output**: Architecture documentation and diagrams
 
 **Example Usage**:
 ```
-Run Command: Chat: Run Prompt → solution-architecture.prompt.md
+Run Command: Chat: Run Prompt → design-architecture.prompt.md
 Input: Reference PRD and Development Plan
 Process: Answer technical constraint and preference questions
 Output: System architecture with component diagrams
 ```
 
 #### 4. Architecture → Prototype
-**Prompt**: `task-execution.prompt.md`
+**Prompt**: `execute-tasks.prompt.md`
 **Purpose**: Begin implementation with guided prototype development
 **Output**: Working prototype code
 
 **Example Usage**:
 ```
-Run Command: Chat: Run Prompt → task-execution.prompt.md
+Run Command: Chat: Run Prompt → execute-tasks.prompt.md
 Input: Choose prototype type (API, CLI, UI)
 Process: Follow guided code generation
 Output: Functional prototype following project standards
@@ -145,19 +145,19 @@ mode: "ask"  # or "agent"
 ```
 Scenario: Adding user authentication to existing app
 
-1. Run: prd-creation.prompt.md
+1. Run: create-prd.prompt.md
    Input: "Add OAuth2 authentication with social login"
    Output: PRD.md with auth requirements
 
-2. Run: task-generation.prompt.md
+2. Run: generate-tasks.prompt.md
    Input: Reference auth PRD
    Output: Development plan with auth tasks
 
-3. Run: solution-architecture.prompt.md
+3. Run: design-architecture.prompt.md
    Input: Reference PRD and plan
    Output: Auth system architecture
 
-4. Run: task-execution.prompt.md
+4. Run: execute-tasks.prompt.md
    Input: Provide PRD and choose API prototype type
    Output: Complete auth endpoints and middleware
 ```
@@ -167,7 +167,7 @@ Scenario: Adding user authentication to existing app
 Scenario: Reviewing a pull request
 
 1. Select code to review
-2. Run: task-review.prompt.md
+2. Run: review-tasks.prompt.md
 3. Copilot analyzes code against project standards
 4. Receive detailed feedback and suggestions
 5. Apply recommendations before merging
@@ -177,7 +177,7 @@ Scenario: Reviewing a pull request
 ```
 Scenario: Building new API endpoints
 
-1. Run: task-execution.prompt.md
+1. Run: execute-tasks.prompt.md
 2. Provide PRD or specify requirements (e.g., "Product CRUD API")
 3. Answer questions about validation, authentication, technology preferences
 4. Receive complete working prototype with:

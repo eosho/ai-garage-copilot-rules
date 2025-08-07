@@ -19,13 +19,13 @@ Each stage builds upon the previous one, creating a systematic approach to solut
 Transform raw ideas into comprehensive Product Requirements Documents (PRDs) through structured discovery questions.
 
 ### Prompt
-**File**: `prd-creation.prompt.md`
+**File**: `create-prd.prompt.md`
 **Mode**: Interactive questioning
 
 ### Process
 1. **Run the prompt**:
    ```
-   Command Palette → Chat: Run Prompt → prd-creation.prompt.md
+   Command Palette → Chat: Run Prompt → create-prd.prompt.md
    ```
 
 2. **Provide your initial idea**:
@@ -75,13 +75,13 @@ Output: Comprehensive PRD.md with detailed requirements
 Convert PRD requirements into detailed development plans with features broken down into specific, actionable tasks.
 
 ### Prompt
-**File**: `task-generation.prompt.md`
+**File**: `generate-tasks.prompt.md`
 **Mode**: Interactive planning
 
 ### Process
 1. **Run the prompt**:
    ```
-   Command Palette → Chat: Run Prompt → task-generation.prompt.md
+   Command Palette → Chat: Run Prompt → generate-tasks.prompt.md
    ```
 
 2. **Reference your PRD**:
@@ -125,13 +125,13 @@ Output: Detailed plan with 3 sprints, 45 tasks, 12-week timeline
 Design the technical architecture, system components, and technology stack based on requirements and development plan.
 
 ### Prompt
-**File**: `solution-architecture.prompt.md`
+**File**: `design-architecture.prompt.md`
 **Mode**: Technical design consultation
 
 ### Process
 1. **Run the prompt**:
    ```
-   Command Palette → Chat: Run Prompt → solution-architecture.prompt.md
+   Command Palette → Chat: Run Prompt → design-architecture.prompt.md
    ```
 
 2. **Provide project context**:
@@ -170,13 +170,13 @@ Output: Microservices architecture with React Native, Node.js, PostgreSQL, Redis
 Generate working prototype code that follows project standards and demonstrates core functionality.
 
 ### Prompt
-**File**: `task-execution.prompt.md`
+**File**: `execute-tasks.prompt.md`
 **Mode**: Implementation guidance
 
 ### Process
 1. **Run the prompt**:
    ```
-   Command Palette → Chat: Run Prompt → task-execution.prompt.md
+   Command Palette → Chat: Run Prompt → execute-tasks.prompt.md
    ```
 
 2. **Choose prototype type**:
@@ -187,7 +187,7 @@ Generate working prototype code that follows project standards and demonstrates 
 
 3. **Follow specialized prompts**:
    - Comprehensive prototyping with dedicated discovery process
-   - Example: `task-execution.prompt.md` for any prototype type (APIs, web apps, scripts, etc.)
+   - Example: `execute-tasks.prompt.md` for any prototype type (APIs, web apps, scripts, etc.)
 
 ### Expected Output
 **Working code** including:
@@ -202,7 +202,7 @@ Generate working prototype code that follows project standards and demonstrates 
 Input: Team connection app architecture
 
 Prototype Choice: API Endpoints
-Specialized Prompt: task-execution.prompt.md
+Specialized Prompt: execute-tasks.prompt.md
 
 Questions:
 - What resources need CRUD operations? (Users, Teams, Messages)
@@ -268,59 +268,59 @@ Backend Prototype ←→ Frontend Prototype
 ### New Product Development
 ```
 1. Product Manager has idea for customer portal
-2. Run prd-creation.prompt.md → Comprehensive PRD
-3. Run task-generation.prompt.md → 6-month roadmap
-4. Run solution-architecture.prompt.md → Cloud-native architecture
-5. Run task-execution.prompt.md → MVP implementation
+2. Run create-prd.prompt.md → Comprehensive PRD
+3. Run generate-tasks.prompt.md → 6-month roadmap
+4. Run design-architecture.prompt.md → Cloud-native architecture
+5. Run execute-tasks.prompt.md → MVP implementation
 ```
 
 ### Feature Enhancement
 ```
 1. Existing app needs mobile API
-2. Run prd-creation.prompt.md → Mobile feature PRD
-3. Run solution-architecture.prompt.md → API design
-4. Run task-execution.prompt.md → API implementation
+2. Run create-prd.prompt.md → Mobile feature PRD
+3. Run design-architecture.prompt.md → API design
+4. Run execute-tasks.prompt.md → API implementation
 5. Integrate with existing system
 ```
 
 ### Technical Debt Reduction
 ```
 1. Legacy system needs modernization
-2. Run prd-creation.prompt.md → Modernization PRD
-3. Run task-generation.prompt.md → Migration strategy
-4. Run solution-architecture.prompt.md → Target architecture
-5. Run task-execution.prompt.md → Pilot implementation
+2. Run create-prd.prompt.md → Modernization PRD
+3. Run generate-tasks.prompt.md → Migration strategy
+4. Run design-architecture.prompt.md → Target architecture
+5. Run execute-tasks.prompt.md → Pilot implementation
 ```
 
 ### Bug Fix or Optimization
 ```
 1. Performance issue identified
-2. Run prd-creation.prompt.md → Performance improvement PRD
-3. Run solution-architecture.prompt.md → Optimization approach
-4. Run task-execution.prompt.md → Performance testing setup
+2. Run create-prd.prompt.md → Performance improvement PRD
+3. Run design-architecture.prompt.md → Optimization approach
+4. Run execute-tasks.prompt.md → Performance testing setup
 5. Implement and measure improvements
 ```
 
 ## Troubleshooting
 
 ### Incomplete Requirements
-- **Go back to discovery** - Run prd-creation.prompt.md again with more detail
+- **Go back to discovery** - Run create-prd.prompt.md again with more detail
 - **Break down complex ideas** - Split large concepts into smaller pieces
 - **Involve stakeholders** - Get input from users and business stakeholders
 
 ### Technical Challenges
-- **Revisit architecture** - Run solution-architecture.prompt.md with new constraints
+- **Revisit architecture** - Run design-architecture.prompt.md with new constraints
 - **Research alternatives** - Ask Copilot about different technical approaches
 - **Start smaller** - Reduce scope to manageable prototype
 
 ### Resource Constraints
-- **Adjust timeline** - Modify task-generation.prompt.md with realistic constraints
+- **Adjust timeline** - Modify generate-tasks.prompt.md with realistic constraints
 - **Prioritize features** - Focus on core value proposition
 - **Consider alternatives** - Explore different technical solutions
 
 ### Quality Issues
 - **Review instruction files** - Ensure coding standards are properly configured
-- **Use code review prompts** - Apply task-review.prompt.md to generated code
+- **Use code review prompts** - Apply review-tasks.prompt.md to generated code
 - **Iterate on implementation** - Refine prototypes based on testing
 
 ## Measuring Success
