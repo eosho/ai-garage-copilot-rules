@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  weather-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - WEATHER_API_ENVIRONMENT=development
+      - WEATHER_API_LOG_LEVEL=INFO
+      - WEATHER_API_HOST=0.0.0.0
+      - WEATHER_API_PORT=8000
+    volumes:
+      - .:/app
+    command: uv run uvicorn weather_api.main:app --host 0.0.0.0 --port 8000 --reload
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

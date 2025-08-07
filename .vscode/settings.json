@@ -1,0 +1,62 @@
+{
+  // === GITHUB COPILOT CUSTOMIZATIONS ===
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    ".vscode/instructions": true
+  },
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.reviewSelection.enabled": true,
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "file": ".github/instructions/shared/security-first.instructions.md"
+    },
+    {
+      "file": ".github/instructions/shared/code-review-checklist.instructions.md"
+    },
+    {
+      "file": ".github/instructions/shared/documentation-standards.instructions.md"
+    }
+  ],
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/instructions/shared/git-message.instructions.md"
+    }
+  ],
+
+  // USE PROMPT FILES
+  "chat.promptFiles": true,
+  "chat.promptFilesLocations": {
+    ".github/prompts": true,
+    ".vscode/prompts": true
+  },
+
+  // === GENERAL EDITOR SETTINGS ===
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // === PYTHON EXTENSION SETTINGS ===
+  "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+
+  // === LANGUAGE-SPECIFIC SETTINGS ===
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+  },
+
+  // === SECURITY AND SECRETS ===
+  "files.associations": {
+    "*.env.*": "properties",
+    "*.secrets": "properties"
+  },
+  "files.exclude": {
+    "**/.env": true,
+    "**/*.secrets": true
+  }
+}
