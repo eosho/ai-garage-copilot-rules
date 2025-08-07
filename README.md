@@ -9,7 +9,7 @@ This repository provides a framework for **agentic development** - a structured 
 The pattern consists of three core components:
 
 1. **📋 Instructions** - Coding standards and best practices that automatically guide Copilot
-2. **🚀 Prompts** - Structured workflows for moving from idea to implementation  
+2. **🚀 Prompts** - Structured workflows for moving from idea to implementation
 3. **⚙️ Configuration** - VS Code settings that integrate everything seamlessly
 
 ## Why Use This Pattern
@@ -33,7 +33,7 @@ The pattern consists of three core components:
 For detailed information on how to use this development pattern:
 
 - **📖 [Using Instructions](docs/using-instructions.md)** - How instruction files automatically guide Copilot
-- **🚀 [Using Prompts](docs/using-prompts.md)** - Step-by-step guide to running workflows  
+- **🚀 [Using Prompts](docs/using-prompts.md)** - Step-by-step guide to running workflows
 - **📋 [Workflow Guide](docs/workflow-guide.md)** - Complete process from idea to implementation
 
 ## Core Workflow
@@ -41,19 +41,19 @@ For detailed information on how to use this development pattern:
 The agentic development process follows a proven 4-stage workflow:
 
 ### 1. 💡 Idea Discovery
-**Prompt**: `new-idea.prompt.md`  
+**Prompt**: `new-idea.prompt.md`
 Transform raw concepts into structured Product Requirements Documents through guided discovery questions.
 
-### 2. 📋 Development Planning  
-**Prompt**: `development-plan.prompt.md`  
+### 2. 📋 Development Planning
+**Prompt**: `development-plan.prompt.md`
 Break down requirements into actionable tasks, features, and sprint plans.
 
 ### 3. 🏗️ Solution Architecture
-**Prompt**: `solution-architecture.prompt.md`  
+**Prompt**: `solution-architecture.prompt.md`
 Design technical architecture and select appropriate technology stack.
 
 ### 4. ⚡ Rapid Prototyping
-**Prompt**: `start-prototyping.prompt.md`  
+**Prompt**: `start-prototyping.prompt.md`
 Generate working code that follows all established patterns and standards.
 
 ## Current Implementation
@@ -70,7 +70,7 @@ This repository includes a complete **Python/FastAPI** implementation as an exam
 
 ### Automatic Code Standards
 - **Type hints and validation** for all functions and classes
-- **Comprehensive error handling** with appropriate exception types  
+- **Comprehensive error handling** with appropriate exception types
 - **Security-first patterns** with input validation and sanitization
 - **Performance optimization** including async/await patterns and caching
 - **Complete documentation** with examples and usage guidelines
@@ -122,7 +122,7 @@ While the current implementation focuses on Python/FastAPI, the pattern is desig
 This pattern is designed to evolve with your team's needs:
 
 - **Add new instruction files** for domain-specific patterns
-- **Create custom prompts** for your common workflows  
+- **Create custom prompts** for your common workflows
 - **Enhance existing instructions** based on code review feedback
 - **Share improvements** that could benefit other teams
 

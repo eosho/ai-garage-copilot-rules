@@ -186,8 +186,8 @@ Generate working prototype code that follows project standards and demonstrates 
    - **Database Schema** (SQL, NoSQL)
 
 3. **Follow specialized prompts**:
-   - Each prototype type has dedicated prompts
-   - Example: `fastapi-endpoints.prompt.md` for API development
+   - Comprehensive prototyping with dedicated discovery process
+   - Example: `start-prototyping.prompt.md` for any prototype type (APIs, web apps, scripts, etc.)
 
 ### Expected Output
 **Working code** including:
@@ -201,8 +201,8 @@ Generate working prototype code that follows project standards and demonstrates 
 ```
 Input: Team connection app architecture
 
-Prototype Choice: API Endpoints
-Specialized Prompt: fastapi-endpoints.prompt.md
+Prototype Choice: API Endpoints  
+Specialized Prompt: start-prototyping.prompt.md
 
 Questions:
 - What resources need CRUD operations? (Users, Teams, Messages)
@@ -279,7 +279,7 @@ Backend Prototype ←→ Frontend Prototype
 1. Existing app needs mobile API
 2. Run new-idea.prompt.md → Mobile feature PRD
 3. Run solution-architecture.prompt.md → API design
-4. Run fastapi-endpoints.prompt.md → API implementation
+4. Run start-prototyping.prompt.md → API implementation
 5. Integrate with existing system
 ```
 

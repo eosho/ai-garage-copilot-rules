@@ -23,7 +23,6 @@ Located in `.github/prompts/`:
 
 ### Utility Prompts
 - **`code-review.prompt.md`** - Comprehensive code review following project standards
-- **`fastapi-endpoints.prompt.md`** - Generate CRUD API endpoints
 
 ## How to Run Prompts
 
@@ -44,7 +43,7 @@ Located in `.github/prompts/`:
 
 1. **Open inline chat**: `Ctrl+I` (Windows) or `Cmd+I` (Mac)
 2. **Reference prompt**: Type `@workspace` and reference the prompt file
-3. **Example**: `@workspace Use fastapi-endpoints.prompt.md to create user management endpoints`
+3. **Example**: `@workspace Use start-prototyping.prompt.md to create user management API`
 
 ## Workflow Execution
 
@@ -158,9 +157,9 @@ Scenario: Adding user authentication to existing app
    Input: Reference PRD and plan
    Output: Auth system architecture
 
-4. Run: start-prototyping.prompt.md → fastapi-endpoints.prompt.md
-   Input: Choose API prototype
-   Output: Auth endpoints and middleware
+4. Run: start-prototyping.prompt.md
+   Input: Provide PRD and choose API prototype type
+   Output: Complete auth endpoints and middleware
 ```
 
 ### Code Review Process
@@ -178,14 +177,14 @@ Scenario: Reviewing a pull request
 ```
 Scenario: Building new API endpoints
 
-1. Run: fastapi-endpoints.prompt.md
-2. Specify resource (e.g., "Product")
-3. Answer questions about validation, authentication
-4. Receive complete CRUD endpoints with:
-   - Pydantic models
-   - FastAPI routers
-   - Error handling
-   - Documentation
+1. Run: start-prototyping.prompt.md
+2. Provide PRD or specify requirements (e.g., "Product CRUD API")
+3. Answer questions about validation, authentication, technology preferences
+4. Receive complete working prototype with:
+   - Pydantic models and validation
+   - API routers and endpoints
+   - Error handling and logging
+   - Documentation and tests
 ```
 
 ## Troubleshooting
