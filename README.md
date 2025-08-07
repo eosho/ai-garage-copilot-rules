@@ -28,6 +28,35 @@ The pattern consists of three core components:
 3. **Start with an idea** - Run the `new-idea.prompt.md` workflow
 4. **Follow the guided process** - Each stage builds on the previous one
 
+## Core Workflow Diagram
+The agentic development process follows a proven 4-stage workflow, visualized below. Each stage uses a specific prompt to transform an input into a key development artifact.
+
+```mermaid
+graph LR
+    subgraph "Phase 1: Idea to PRD"
+        A(💡 Raw Idea) -->|Run| B(new-idea.prompt.md);
+        B -->|Generates| C{📋 PRD Document};
+    end
+
+    subgraph "Phase 2: Planning & Design"
+        C -->|Run| D(development-plan.prompt.md);
+        D -->|Generates| E{📑 Development Plan};
+        E -->|Run| F(solution-architecture.prompt.md);
+        F -->|Generates| G{🏗️ Technical Design};
+    end
+
+    subgraph "Phase 3: Implementation"
+        G -->|Run| H(start-prototyping.prompt.md);
+        H -->|Generates| I(💻 Working Prototype);
+    end
+
+    %% Styling
+    classDef prompt fill:#FFC8A2,stroke:#D67229,stroke-width:2px;
+    classDef artifact fill:#A2D2FF,stroke:#3A86FF,stroke-width:2px;
+    class B,D,F,H prompt;
+    class C,E,G artifact;
+```
+
 ## Documentation
 
 For detailed information on how to use this development pattern:
