@@ -1,53 +1,71 @@
 ---
 description: "Transform a raw idea into a comprehensive Product Requirements Document (PRD) through guided discovery."
-mode: "ask"
+mode: 'ask'
+model: "Claude Sonnet 4"
 ---
 
 # New Idea to PRD Development Prompt
 
-This prompt will help you transform a raw idea into a well-structured Product Requirements Document (PRD) through a comprehensive discovery and grooming process.
+I'll help you transform your raw idea into a comprehensive Product Requirements Document (PRD) through interactive discovery and grooming questions.
 
-## 1. **Initial Idea Capture**
+## Interaction Approach
 
-Please provide a high-level description of your new idea, feature, or solution.
+When you present your idea, I will:
 
-**Your Idea:**
+1. **Ask clarifying questions** to understand the core problem and solution
+2. **Gather detailed requirements** through targeted questions
+3. **Validate assumptions** and scope with you
+4. **Create a structured PRD** based on our discussion
 
-> ${input:Please describe your idea here...}
+## Discovery Questions I'll Ask
 
-## 2. **Discovery Questions**
+I'll systematically ask about:
 
-I'll ask you a series of questions to help refine and structure your idea. Please answer as thoroughly as possible:
+### **Problem & Opportunity**
+- What specific problem are you solving?
+- Who has this problem and how painful is it?
+- What solutions exist today and why aren't they sufficient?
 
-### **Problem Definition**
-- What specific problem are you trying to solve?
-- Who experiences this problem most acutely?
-- How are people currently solving this problem (if at all)?
-- What pain points exist with current solutions?
+### **Users & Market**
+- Who are your target users?
+- What are their key characteristics and behaviors?
+- How will they discover and adopt your solution?
 
-### **Target Users & Market**
-- Who is your primary target user/customer?
-- What are their key characteristics (demographics, behaviors, needs)?
-- How large is this potential user base?
-- Are there secondary user groups to consider?
+### **Solution Definition**
+- What's your core value proposition?
+- What are the must-have vs nice-to-have features?
+- What constraints or requirements do you have?
 
-### **Value Proposition**
-- What unique value does your solution provide?
-- Why would users choose your solution over alternatives?
-- What's the core benefit that users will experience?
+### **Success & Scope**
 - How will you measure success?
+- What does MVP look like vs the full vision?
+- What's your timeline and available resources?
 
-### **Scope & Requirements**
-- What are the must-have features for the initial version?
-- What features would be nice to have but not essential?
-- Are there any technical constraints or requirements?
-- What integrations or dependencies are needed?
+## Final Deliverable
 
-### **Business Context**
-- What are the business goals this idea supports?
-- What's the expected timeline for delivery?
-- What resources (team, budget, tools) are available?
-- Are there any compliance or regulatory considerations?
+After our discovery session, I will create a comprehensive **PRD.md** file in your workspace that includes:
+
+### **PRD Structure**
+- **Executive Summary** - One-page overview of the solution
+- **Problem Statement** - Clear definition of the problem being solved
+- **Target Users & Personas** - Detailed user profiles and use cases
+- **Solution Overview** - High-level description of the proposed solution
+- **Functional Requirements** - Detailed feature specifications
+- **Non-Functional Requirements** - Performance, security, scalability needs
+- **User Stories & Acceptance Criteria** - Actionable development requirements
+- **Success Metrics & KPIs** - How success will be measured
+- **Timeline & Milestones** - High-level project phases
+- **Technical Considerations** - Architecture and technology constraints
+- **Risks & Mitigation Strategies** - Potential issues and solutions
+
+### **Next Steps After PRD Creation**
+1. **[Design Solution Architecture](./solution-architecture.prompt.md)** - Technical architecture design
+2. **[Create Development Plan](./development-plan.prompt.md)** - Feature breakdown and task planning
+3. **[Start Prototyping](./start-prototyping.prompt.md)** - Begin MVP development
+
+## Let's Start
+
+**Please describe your idea or solution concept, and I'll ask targeted questions to develop it into a comprehensive PRD document.**
 
 ### **Success Metrics**
 - How will you know if this idea is successful?

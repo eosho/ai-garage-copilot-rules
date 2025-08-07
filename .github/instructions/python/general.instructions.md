@@ -72,9 +72,26 @@ python -m my_project.main
 ## Dependency Management
 
 - **Use UV**: Use UV for fast dependency installation and environment management instead of pip.
+- **Virtual Environment Requirement**: **ALWAYS** execute Python code in a virtual environment, never directly on the host OS.
+- **Environment Detection**: Check for existing `.venv` directory in workspace; create one if it doesn't exist.
 - **Explicit Dependencies**: Keep all dependencies explicitly listed in `pyproject.toml` with version constraints.
 - **Lock Files**: Commit `uv.lock` files to ensure reproducible builds across environments.
 - **Development Dependencies**: Separate development dependencies from runtime dependencies in `pyproject.toml`.
+
+### Virtual Environment Management
+
+When executing Python code, Copilot must:
+1. **Check for existing virtual environment**: Look for `.venv` directory in the workspace root
+2. **Create if missing**: Use `uv venv` to create `.venv` if it doesn't exist (fallback to `python -m venv .venv` if UV not available)
+3. **Activate environment**: Always run Python commands within the virtual environment context
+4. **Install dependencies**: Use `uv sync` or `uv pip install` within the virtual environment
+
+### Security and Isolation Benefits
+
+- **System Protection**: Prevents installing packages globally that could affect the host OS
+- **Dependency Isolation**: Avoids conflicts between different projects' dependencies
+- **Reproducible Builds**: Ensures consistent behavior across development and deployment environments
+- **Package Safety**: Contains potentially malicious or incompatible packages within the environment
 
 ### UV Installation and Usage
 
@@ -98,6 +115,42 @@ uv sync
 # Run commands in the UV environment
 uv run python -m my_project.main
 uv run pytest
+```
+
+### Virtual Environment Workflow
+
+```bash
+# Check for existing .venv directory
+if [ ! -d ".venv" ]; then
+    # Create virtual environment if it doesn't exist
+    uv venv
+fi
+
+# Always use uv run to execute Python commands in the virtual environment
+uv run python script.py
+uv run pytest
+uv run black .
+uv run mypy .
+```
+
+### Fallback Virtual Environment Workflow
+
+```bash
+# Check for existing .venv directory
+if [ ! -d ".venv" ]; then
+    # Create virtual environment using UV if available, fallback to python -m venv
+    if command -v uv &> /dev/null; then
+        uv venv
+    else
+        python -m venv .venv
+    fi
+fi
+
+# Always use uv run to execute Python commands in the virtual environment
+uv run python script.py
+uv run pytest
+uv run black .
+uv run mypy .
 ```
 
 ### Example pyproject.toml

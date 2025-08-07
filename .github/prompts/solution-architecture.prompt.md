@@ -1,15 +1,47 @@
 ---
 description: "Design the solution architecture for a new feature or application."
-mode: "ask"
+mode: 'ask'
+model: "Claude Sonnet 4"
 ---
 
 # Solution Architecture Design Prompt
 
-This prompt will guide you through designing a robust and scalable solution architecture for your new feature or application.
+I'll help you design a robust, scalable solution architecture by asking targeted questions about your requirements and constraints.
 
-## 1. **High-Level Overview**
+## Architecture Design Process
 
-Please provide a brief overview of the solution you are designing. What are the key goals and constraints?
+When you share your solution requirements, I will:
+
+1. **Ask clarifying questions** about functional and non-functional requirements
+2. **Understand constraints** like scale, performance, security, and compliance needs
+3. **Recommend technology stack** based on your team's skills and project needs
+4. **Design system components** and their interactions
+5. **Address scalability, security, and reliability** concerns
+6. **Create architectural diagrams** and documentation
+
+## Key Questions I'll Ask
+
+### **Requirements & Constraints**
+- What are the core functional requirements?
+- What are your performance, scalability, and availability requirements?
+- Are there any security, compliance, or regulatory requirements?
+- What's your expected user load and data volume?
+
+### **Technical Context**
+- What's your team's technology expertise?
+- Are there existing systems you need to integrate with?
+- What's your preferred cloud provider or deployment model?
+- What's your budget and timeline constraints?
+
+### **System Characteristics**
+- Will this be a monolith or microservices architecture?
+- Do you need real-time features or is eventual consistency acceptable?
+- What are your data consistency and backup requirements?
+- How will you handle monitoring, logging, and observability?
+
+## Let's Start
+
+**Please describe your solution requirements, and I'll ask targeted questions to design the optimal architecture for your needs.**
 
 ## 2. **Component Breakdown**
 

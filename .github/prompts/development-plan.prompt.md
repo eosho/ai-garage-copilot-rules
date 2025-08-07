@@ -1,15 +1,73 @@
 ---
 description: "Create a detailed development plan for a new feature or project."
 mode: "ask"
+model: "Claude Sonnet 4"
 ---
 
 # Development Plan Creation Prompt
 
-This prompt will help you create a detailed development plan, breaking down a new feature or project into manageable tasks and timelines.
+I'll help you create a comprehensive development plan by asking questions about your project and breaking it down into manageable tasks and timelines.
 
-## 1. **Project Overview**
+## Planning Approach
 
-Please provide a brief overview of the project or feature for which you are creating a development plan.
+When you share your project details, I will:
+
+1. **Ask clarifying questions** about scope, requirements, and constraints
+2. **Help define user stories** with clear acceptance criteria
+3. **Break down work** into specific, actionable tasks
+4. **Estimate effort** and create realistic timelines
+5. **Identify dependencies** and potential risks
+
+## Questions I'll Ask
+
+### **Project Context**
+- What's the overall goal and scope of this project?
+- Who are the stakeholders and what are their expectations?
+- What are the key constraints (timeline, resources, technology)?
+
+### **Requirements & Features**
+- What are the core features that must be included?
+- Are there any existing systems to integrate with?
+- What are the performance and scalability requirements?
+
+### **Team & Resources**
+- What's your team composition and skill levels?
+- What tools and technologies are you already using?
+- What's your preferred development methodology (Agile, etc.)?
+
+### **Timeline & Priorities**
+- When do you need this delivered?
+- What features are highest priority for MVP?
+- Are there any critical milestones or dependencies?
+
+## Final Deliverable
+
+After our planning session, I will create a comprehensive **Development-Plan.md** file that includes:
+
+### **Development Plan Structure**
+- **Project Overview** - Goals, scope, and success criteria
+- **Feature Breakdown** - High-level features organized by priority
+- **User Stories** - Detailed user stories with acceptance criteria
+- **Task Breakdown** - Each feature broken into specific development tasks
+- **Effort Estimation** - Time estimates for each task (hours/story points)
+- **Sprint Planning** - Organized sprints with deliverables and timelines
+- **Technical Dependencies** - Required integrations and constraints
+- **Risk Assessment** - Potential blockers and mitigation strategies
+- **Team Assignments** - Who works on what (if team info provided)
+- **Definition of Done** - Quality criteria for each deliverable
+
+### **Task Organization**
+Features will be broken down into:
+- **Frontend Tasks** - UI/UX implementation
+- **Backend Tasks** - API and business logic
+- **Database Tasks** - Schema design and migrations
+- **Integration Tasks** - Third-party services and APIs
+- **Testing Tasks** - Unit, integration, and E2E tests
+- **DevOps Tasks** - CI/CD, deployment, monitoring
+
+## Let's Start
+
+**Please describe your project or share your PRD, and I'll ask targeted questions to create a detailed development plan with features, tasks, and timelines.**
 
 ## 2. **User Stories**
 
