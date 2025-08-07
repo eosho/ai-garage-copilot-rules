@@ -201,7 +201,7 @@ Generate working prototype code that follows project standards and demonstrates 
 ```
 Input: Team connection app architecture
 
-Prototype Choice: API Endpoints  
+Prototype Choice: API Endpoints
 Specialized Prompt: start-prototyping.prompt.md
 
 Questions:
