@@ -25,7 +25,7 @@ The pattern consists of three core components:
 
 1. **Clone or copy this repository structure** to your project
 2. **Open in VS Code** - The instructions will be automatically applied
-3. **Start with an idea** - Run the `new-idea.prompt.md` workflow
+3. **Start with an idea** - Run the `prd-creation.prompt.md` workflow
 4. **Follow the guided process** - Each stage builds on the previous one
 
 ## Documentation
@@ -38,14 +38,14 @@ For detailed information on how to use this development pattern:
 
 ## Core Workflow
 
-The agentic development process follows a proven 4-stage workflow:
+The agentic development process follows a proven 5-stage workflow:
 
 ### 1. 💡 Idea Discovery
-**Prompt**: `new-idea.prompt.md`
+**Prompt**: `prd-creation.prompt.md`
 Transform raw concepts into structured Product Requirements Documents through guided discovery questions.
 
 ### 2. 📋 Development Planning
-**Prompt**: `development-plan.prompt.md`
+**Prompt**: `task-generation.prompt.md`
 Break down requirements into actionable tasks, features, and sprint plans.
 
 ### 3. 🏗️ Solution Architecture
@@ -53,15 +53,19 @@ Break down requirements into actionable tasks, features, and sprint plans.
 Design technical architecture and select appropriate technology stack.
 
 ### 4. ⚡ Rapid Prototyping
-**Prompt**: `start-prototyping.prompt.md`
+**Prompt**: `task-execution.prompt.md`
 Generate working code that follows all established patterns and standards.
+
+### 5. 🧐 Code Review
+**Prompt**: `task-review.prompt.md`
+Perform a comprehensive code review against project standards before finalizing.
 
 ## Current Implementation
 
 This repository includes a complete **Python/FastAPI** implementation as an example of the pattern in action, including:
 
 - ✅ **10 Python instruction files** covering everything from basic syntax to performance optimization
-- ✅ **6 workflow prompts** for end-to-end development
+- ✅ **5 workflow prompts** for end-to-end development
 - ✅ **Security-first practices** built into every instruction
 - ✅ **Production-ready patterns** with error handling, logging, and testing
 - ✅ **Comprehensive documentation** with step-by-step guides
