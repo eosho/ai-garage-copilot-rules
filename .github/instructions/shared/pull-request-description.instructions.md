@@ -1,4 +1,5 @@
 ---
+applyTo: "**"
 description: "Guidelines for generating comprehensive pull request descriptions."
 ---
 

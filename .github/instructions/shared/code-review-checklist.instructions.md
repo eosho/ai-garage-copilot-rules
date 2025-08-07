@@ -1,3 +1,7 @@
+---
+applyTo: "**"
+---
+
 # Code Review Checklist Instructions
 
 **Keywords**: #code-review #quality #standards #checklist #best-practices

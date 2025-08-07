@@ -1,3 +1,7 @@
+---
+applyTo: "**"
+---
+
 # Documentation Standards Instructions
 
 **Keywords**: #documentation #in-code-docs #api-docs #diagrams #standards
@@ -73,35 +77,35 @@
 ### Python Documentation (Google Style)
 
 ```python
-def calculate_user_score(user_id: int, weights: Dict[str, float], 
+def calculate_user_score(user_id: int, weights: Dict[str, float],
                         normalize: bool = True) -> Tuple[float, Dict[str, Any]]:
     """Calculate user score based on multiple factors.
-    
+
     This function computes a weighted score for a user based on various
     metrics like engagement, activity, and performance indicators.
-    
+
     Args:
         user_id: The unique identifier for the user.
         weights: Dictionary mapping metric names to their weights.
             Must contain keys: 'engagement', 'activity', 'performance'.
         normalize: Whether to normalize the final score to 0-1 range.
             Defaults to True.
-    
+
     Returns:
         A tuple containing:
             - The calculated score as a float
             - A dictionary with detailed metrics breakdown
-    
+
     Raises:
         ValueError: If user_id is not found or weights are invalid.
         DatabaseError: If database connection fails.
-    
+
     Example:
         >>> weights = {'engagement': 0.4, 'activity': 0.3, 'performance': 0.3}
         >>> score, details = calculate_user_score(123, weights)
         >>> print(f"User score: {score:.2f}")
         User score: 0.85
-    
+
     Note:
         This function requires database access and may be slow for
         large datasets. Consider using batch processing for multiple users.
@@ -134,7 +138,7 @@ def calculate_user_score(user_id: int, weights: Dict[str, float],
 ///     ["activity"] = 0.3f,
 ///     ["performance"] = 0.3f
 /// };
-/// 
+///
 /// var result = await CalculateUserScoreAsync(123, weights);
 /// Console.WriteLine($"User score: {result.Score:F2}");
 /// </code>
@@ -144,8 +148,8 @@ def calculate_user_score(user_id: int, weights: Dict[str, float],
 /// Consider using batch processing for multiple users.
 /// </remarks>
 public async Task<UserScoreResult> CalculateUserScoreAsync(
-    int userId, 
-    Dictionary<string, float> weights, 
+    int userId,
+    Dictionary<string, float> weights,
     bool normalize = true)
 ```
 
@@ -154,18 +158,18 @@ public async Task<UserScoreResult> CalculateUserScoreAsync(
 ```typescript
 /**
  * Calculates the user score based on multiple weighted factors.
- * 
+ *
  * @param userId - The unique identifier for the user
  * @param weights - Object mapping metric names to their weights
  * @param normalize - Whether to normalize the final score to 0-1 range
  * @returns Promise resolving to user score result with detailed metrics
- * 
+ *
  * @throws {@link ValidationError}
  * Thrown when userId is invalid or weights contain invalid values
- * 
+ *
  * @throws {@link DatabaseError}
  * Thrown when database connection fails or data is unavailable
- * 
+ *
  * @example
  * ```typescript
  * const weights = {
@@ -173,11 +177,11 @@ public async Task<UserScoreResult> CalculateUserScoreAsync(
  *   activity: 0.3,
  *   performance: 0.3
  * };
- * 
+ *
  * const result = await calculateUserScore(123, weights);
  * console.log(`User score: ${result.score.toFixed(2)}`);
  * ```
- * 
+ *
  * @remarks
  * This function requires database access and may be slow for large datasets.
  * Consider using batch processing for multiple users.
@@ -218,16 +222,16 @@ graph TB
     B --> C[Authentication Service]
     B --> D[User Service]
     B --> E[Notification Service]
-    
+
     D --> F[(User Database)]
     E --> G[(Message Queue)]
-    
+
     subgraph "Security Layer"
         C
         H[Rate Limiter]
         I[CORS Handler]
     end
-    
+
     subgraph "Data Layer"
         F
         G
@@ -243,14 +247,14 @@ sequenceDiagram
     participant A as Auth Service
     participant U as User Service
     participant D as Database
-    
+
     C->>G: POST /api/users/login
     G->>A: Validate credentials
     A->>D: Check user credentials
     D-->>A: User data
     A-->>G: JWT token
     G-->>C: 200 OK + token
-    
+
     C->>G: GET /api/users/profile
     G->>A: Validate JWT
     A-->>G: Token valid

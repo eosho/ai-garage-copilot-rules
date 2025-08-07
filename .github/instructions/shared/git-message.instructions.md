@@ -1,5 +1,6 @@
 ---
 description: "Guidelines for generating conventional Git commit messages."
+applyTo: "**"
 ---
 
 # Git Commit Message Instructions

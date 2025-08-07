@@ -1,3 +1,7 @@
+---
+applyTo: "**"
+---
+
 # Security-First Development Instructions
 
 **Keywords**: #security #security-first #owasp #secure-coding #best-practices
