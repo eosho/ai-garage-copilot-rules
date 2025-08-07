@@ -1,5 +1,5 @@
 ---
-description: "Guidelines for optimizing performance in Python 3.10+ applications, including concurrency patterns, caching strategies, and memory optimization."
+description: "Guidelines for optimizing performance in Python 3.11+ applications, including concurrency patterns, caching strategies, and memory optimization."
 applyTo: "**/*.py"
 ---
 
@@ -10,7 +10,7 @@ applyTo: "**/*.py"
 - **Profile First**: Always measure before optimizing. Use `cProfile`, `py-spy`, or `line_profiler`.
 - **Bottleneck Focus**: Optimize the actual bottlenecks, not perceived slow areas.
 - **Readability vs Performance**: Don't sacrifice code clarity for micro-optimizations.
-- **Modern Python**: Leverage Python 3.10+ features like structural pattern matching and improved typing.
+- **Modern Python**: Leverage Python 3.11+ features like structural pattern matching and improved typing.
 
 ## Concurrency Patterns
 

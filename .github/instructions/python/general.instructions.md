@@ -168,7 +168,7 @@ dependencies = [
     "pydantic>=2.5.0,<3.0.0",
     "sqlalchemy>=2.0.0,<3.0.0",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [project.optional-dependencies]
 dev = [
@@ -189,7 +189,9 @@ dev-dependencies = [
     "ruff>=0.1.0",
     "mypy>=1.7.0",
 ]
-```
+
+[tool.hatch.build.targets.wheel]
+packages = ["project_name"]```
 
 ## Example
 
