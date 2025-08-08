@@ -155,43 +155,7 @@ uv run mypy .
 
 ### Example pyproject.toml
 
-```toml
-[project]
-name = "my-project"
-version = "0.1.0"
-description = "A sample Python project"
-authors = [
-    {name = "Your Name", email = "your.email@example.com"}
-]
-dependencies = [
-    "fastapi>=0.104.0,<1.0.0",
-    "pydantic>=2.5.0,<3.0.0",
-    "sqlalchemy>=2.0.0,<3.0.0",
-]
-requires-python = ">=3.11"
-
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.4.0",
-    "black>=23.0.0",
-    "ruff>=0.1.0",
-    "mypy>=1.7.0",
-]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.uv]
-dev-dependencies = [
-    "pytest>=7.4.0",
-    "black>=23.0.0",
-    "ruff>=0.1.0",
-    "mypy>=1.7.0",
-]
-
-[tool.hatch.build.targets.wheel]
-packages = ["project_name"]```
+[pyproject.toml](../../../template.pyproject.toml)
 
 ## Example
 
