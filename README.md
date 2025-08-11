@@ -25,7 +25,7 @@ The pattern consists of three core components:
 
 1. **Clone or copy this repository structure** to your project
 2. **Open in VS Code** - The instructions will be automatically applied
-3. **Start with an idea** - Run the `prd-creation.prompt.md` workflow
+3. **Start with an idea** - Run the `create-prd.prompt.md` workflow
 4. **Follow the guided process** - Each stage builds on the previous one
 
 ## Documentation
@@ -41,23 +41,23 @@ For detailed information on how to use this development pattern:
 The agentic development process follows a proven 5-stage workflow:
 
 ### 1. 💡 Idea Discovery
-**Prompt**: `prd-creation.prompt.md`
+**Prompt**: `create-prd.prompt.md`
 Transform raw concepts into structured Product Requirements Documents through guided discovery questions.
 
 ### 2. 📋 Development Planning
-**Prompt**: `task-generation.prompt.md`
+**Prompt**: `generate-tasks.prompt.md`
 Break down requirements into actionable tasks, features, and sprint plans.
 
 ### 3. 🏗️ Solution Architecture
-**Prompt**: `solution-architecture.prompt.md`
+**Prompt**: `design-architecture.prompt.md`
 Design technical architecture and select appropriate technology stack.
 
 ### 4. ⚡ Rapid Prototyping
-**Prompt**: `task-execution.prompt.md`
+**Prompt**: `execute-tasks.prompt.md`
 Generate working code that follows all established patterns and standards.
 
 ### 5. 🧐 Code Review
-**Prompt**: `task-review.prompt.md`
+**Prompt**: `review-tasks.prompt.md`
 Perform a comprehensive code review against project standards before finalizing.
 
 ## Current Implementation
