@@ -56,6 +56,7 @@ my_project/
 │   └── test_main.py
 ├── .gitignore
 ├── pyproject.toml
+├── pytest.ini
 └── README.md
 ```
 
