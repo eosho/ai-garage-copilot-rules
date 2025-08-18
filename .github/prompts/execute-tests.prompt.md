@@ -7,41 +7,7 @@ mode: "agent"
 
 ## Context
 
-This prompt is designed to execute tests, analyze failures, and iteratively fix issues until all tests pass successfully. The approach varies based on project type and scope.
-
-## Project Types
-
-1. **Greenfield Project**:
-   - Comprehensive test setup
-   - Full CI/CD integration
-   - Complete code coverage goals
-   - Extensive documentation
-
-2. **Existing Project**:
-   - Focus on affected areas
-   - Match existing patterns
-   - Minimal disruption
-   - Targeted fixes
-
-## Response Levels
-
-1. **Quick Check** (default):
-   - Focus on specific file/error
-   - Minimal tool usage
-   - Fast iteration cycle
-   - Basic validation
-
-2. **Standard Analysis**:
-   - Related file checks
-   - Common edge cases
-   - Test dependencies
-   - Basic regression testing
-
-3. **Deep Dive**:
-   - Full repository analysis
-   - All edge cases
-   - Complete regression testing
-   - Performance impact
+This prompt is designed to execute tests, analyze failures, and iteratively fix issues until all tests pass successfully.
 
 ## Workflow
 
@@ -58,29 +24,16 @@ Execute the workflow with:
 ```
 #test-automation
 goal: Execute and fix tests
-project: [greenfield|existing]
 scope: [path to test files or directory]
-mode: [quick|standard|deep]
+mode: [full|incremental]
 ```
 
-Examples:
-
-Quick check for existing project:
+Example:
 ```
 #test-automation
 goal: Execute and fix tests
-project: existing
-scope: ./tests/test_api.py
-mode: quick
-```
-
-Full analysis for greenfield project:
-```
-#test-automation
-goal: Execute and fix tests
-project: greenfield
 scope: ./tests
-mode: deep
+mode: full
 ```
 
 ## Analyzing Test Failures
