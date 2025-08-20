@@ -98,6 +98,7 @@ owner: "<Product Owner Name or Team>"
 
 Then include these **top-level sections** (use exactly these headings):
 
+```yaml
 # Executive Summary
 - One-paragraph overview: business goal, target users, the essence of the solution, and definition of success.
 
@@ -176,6 +177,7 @@ Then include these **top-level sections** (use exactly these headings):
 - Output only the PRD content (metadata + sections) once user says “Proceed”.
 - Do not include side commentary in the final PRD.
 - If significant gaps remain, include them under “Assumptions” and “Open Questions”.
+```
 
 ---
 
