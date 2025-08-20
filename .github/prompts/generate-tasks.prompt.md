@@ -132,7 +132,3 @@ Use this structure:
 * Use **task IDs (T1, T2, …)** for reference and dependencies.
 * Provide an **estimated completion date** based on task counts and rough estimates.
 * Do not summarize the PRD; only output the **task list**.
-
----
-
-This ensures a PRD is transformed into a **complete, organized, and implementable development task plan**.
