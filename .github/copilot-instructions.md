@@ -177,6 +177,23 @@ This file contains general coding practices, preferred technologies, and project
 
 ---
 
+## Research and Implementation Guidance
+
+To ensure all generated code and architectural patterns are modern, secure, and idiomatic, you are expected to use your available tools to conduct research during development.
+
+### Information Sourcing Hierarchy
+When implementing tasks, prioritize information from the following sources in order:
+1.  **Official Documentation**: Always prefer the official documentation for the specified frameworks and libraries (e.g., FastAPI, React, Pydantic).
+2.  **Trusted Community Resources**: Refer to well-regarded sources, such as established blogs, tutorials, and conference talks from framework authors or core contributors.
+3.  **Reference Implementations**: Analyze high-quality, popular open-source projects on GitHub that use a similar technology stack to understand common patterns and best practices.
+
+### Tool Usage
+- **Proactive Research**: Do not rely solely on your existing knowledge. Use your tools to search for the latest API documentation, configuration options, and security advisories.
+- **Validate Assumptions**: If you are unsure about a specific implementation detail or best practice, use your tools to find examples or documentation to confirm your approach.
+- **Cite Sources (If Necessary)**: If a complex or non-obvious solution is derived from a specific source, include a comment with a link to the documentation or reference material.
+
+---
+
 These instructions apply to all code generation tasks and should be followed consistently across all projects and technologies.
 
 ---
