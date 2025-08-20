@@ -34,7 +34,6 @@ For detailed information on how to use this development pattern:
 
 - **📖 [Using Instructions](docs/using-instructions.md)** - How instruction files automatically guide Copilot
 - **🚀 [Using Prompts](docs/using-prompts.md)** - Step-by-step guide to running workflows
-- **📋 [Workflow Guide](docs/workflow-guide.md)** - Complete process from idea to implementation
 
 ## Core Workflow
 
@@ -56,7 +55,11 @@ Design technical architecture and select appropriate technology stack.
 **Prompt**: `execute-tasks.prompt.md`
 Generate working code that follows all established patterns and standards.
 
-### 5. 🧐 Code Review
+### 5. 🧪 Run Tests
+**Prompt**: `run-tests.prompt.md`
+Runs all unit tests to verify that features and business logic work as intended.
+
+### 6. 🧐 Code Review
 **Prompt**: `review-tasks.prompt.md`
 Perform a comprehensive code review against project standards before finalizing.
 
@@ -106,8 +109,7 @@ ai-garage-copilot-rules/
 │   └── settings.json                 # Copilot integration settings
 ├── docs/                             # Comprehensive documentation
 │   ├── using-instructions.md         # Instruction file guide
-│   ├── using-prompts.md             # Prompt execution guide
-│   └── workflow-guide.md            # End-to-end process guide
+│   └── using-prompts.md             # Prompt execution guide
 ├── samples/                          # Example implementations
 └── README.md                        # This file
 ```
