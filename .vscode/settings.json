@@ -44,6 +44,7 @@
   "python.defaultInterpreterPath": "./venv/bin/python",
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
+  "python.terminal.useEnvFile": true,
 
   // === LANGUAGE-SPECIFIC SETTINGS ===
   "[python]": {
