@@ -1,0 +1,63 @@
+# Template pyproject.toml for AI Garage Python Projects
+# Copy this file to your project directory and rename it to pyproject.toml
+# Update the project-specific fields like name, version, description, and authors
+
+[project]
+name = "project-name"  # Replace with your project name
+version = "0.1.0"
+description = "Project description"  # Replace with your project description
+authors = []  # Add your author information
+readme = "README.md"
+requires-python = ">=3.11"
+
+# Standard dependencies for AI Garage Python projects
+# Update versions as needed, but maintain the version range pattern
+dependencies = [
+    "fastapi>=0.104.0,<1.0.0",
+    "uvicorn>=0.23.0,<0.24.0",
+    "pydantic>=2.4.0,<3.0.0",
+    "python-json-logger>=2.0.0,<3.0.0",
+    "pydantic-settings>=2.0.0,<3.0.0",
+    "python-multipart>=0.0.6,<0.1.0",
+    "aiofiles>=23.2.0,<24.0.0",
+    "cachetools>=5.3.1,<6.0.0"
+]
+
+# Development dependencies for testing, linting, and code quality
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.24.1",
+    "black>=23.7.0",
+    "ruff>=0.0.284",
+    "mypy>=1.5.1",
+    "aiohttp>=3.9.0",
+]
+
+# Build configuration for Python packages
+[tool.hatch.build.targets.wheel]
+packages = ["project_name"]  # Replace with your package name
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Ruff configuration for linting
+[tool.ruff]
+select = ["E", "F", "B", "I"]  # Error, F-strings, Bug rules, Import sorting
+ignore = []
+line-length = 88
+
+# Black configuration for code formatting
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+# MyPy configuration for type checking
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
